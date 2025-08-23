@@ -1,1 +1,80 @@
-# acessivel
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Acessível - BGS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Menu de acessibilidade -->
+<div class="acessibilidade">
+<button id="aumentar">A+</button>
+<button id="diminuir">A-</button>
+<button id="contraste">Alto Contraste</button>
+</div>
+
+
+<!-- Cabeçalho -->
+<header>
+<img src="images/logo-bgs.png" alt="Logo da Brasil Game Show" class="logo">
+<nav>
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#galeria">Galeria</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
+</header>
+
+
+<!-- Banner principal -->
+<section id="inicio" class="banner">
+<h1>Bem-vindo à BGS</h1>
+<p>A maior feira de games da América Latina, reunindo fãs, empresas e novidades do mundo gamer.</p>
+<img src="images/publico-bgs.jpg" alt="Público na Brasil Game Show com estandes iluminados e telões de jogos.">
+</section>
+
+
+<!-- Galeria -->
+<section id="galeria" class="galeria">
+<h2>Galeria da BGS</h2>
+<div class="grid">
+<img src="images/corredores-bgs.jpg" alt="Corredores lotados da BGS com visitantes e estandes coloridos.">
+<img src="images/palco-bgs.jpg" alt="Palco principal da BGS com telão exibindo trailers de jogos.">
+<img src="images/cosplayers-bgs.jpg" alt="Cosplayers caracterizados como personagens de jogos na BGS.">
+<img src="images/stand-bgs.jpg" alt="Estandes de empresas de games com público interagindo.">
+<img src="images/loja-bgs.jpg" alt="Loja de jogos com visitantes comprando produtos durante a BGS.">
+</div>
+</section>
+
+
+<!-- Contato -->
+<section id="contato" class="contato">
+<h2>Entre em Contato</h2>
+<form>
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+
+
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" required>
+
+
+<label for="mensagem">Mensagem:</label>
+<textarea id="mensagem" name="mensagem" rows="4"></textarea>
+
+
+<button type="submit">Enviar</button>
+</form>
+</section>
+
+
+<footer>
+<p>&copy; 2025 - Site acessível inspirado na BGS</p>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
