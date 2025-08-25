@@ -1,4 +1,6 @@
-/* styles.css */
+/* ==========================
+   ESTILO GLOBAL
+========================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,6 +8,9 @@ body {
   line-height: 1.6;
 }
 
+/* ==========================
+   HEADER
+========================== */
 header {
   display: flex;
   justify-content: space-between;
@@ -16,7 +21,7 @@ header {
 }
 
 header .logo {
-  max-height: 60px; /* deixei um pouco maior */
+  max-height: 60px;
 }
 
 nav ul {
@@ -33,19 +38,36 @@ nav a {
 }
 
 /* ==========================
+   ESTILO UNIFICADO PARA IMAGENS
+========================== */
+img {
+  max-width: 400px;    /* Limite geral de largura */
+  width: 100%;         /* Ajusta ao container */
+  height: auto;        /* Mantém proporção */
+  display: block;
+  margin: 20px auto;   /* Centraliza e dá espaçamento vertical */
+  border-radius: 8px;  /* Borda suave */
+}
+
+.banner img {
+  max-width: 600px;    /* Banner maior para destaque */
+}
+
+.galeria img {
+  max-width: 300px;    /* Galeria compacta */
+  transition: transform 0.3s; /* Efeito leve ao passar o mouse */
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================
    BANNER
 ========================== */
 .banner {
   text-align: center;
   padding: 2rem;
-}
-
-.banner img {
-  max-width: 600px;   /* tamanho médio fixo */
-  width: 100%;        /* responsivo */
-  height: auto;
-  margin-top: 1rem;
-  border-radius: 8px;
 }
 
 /* ==========================
@@ -58,16 +80,9 @@ nav a {
 
 .galeria .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.galeria img {
-  width: 100%;
-  max-width: 350px;   /* limite para não ficarem gigantes */
-  margin: auto;
-  display: block;
-  border-radius: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  justify-items: center; /* Centraliza imagens pequenas */
 }
 
 /* ==========================
@@ -84,6 +99,8 @@ form {
 }
 
 form input, form textarea {
+  width: 100%;
+  box-sizing: border-box;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -139,4 +156,29 @@ footer {
 
 .alto-contraste a {
   color: yellow !important;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .banner img {
+    max-width: 100%;
+  }
+
+  .galeria .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .acessibilidade button {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
 }
