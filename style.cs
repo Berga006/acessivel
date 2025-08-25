@@ -16,7 +16,7 @@ header {
 }
 
 header .logo {
-  max-height: 50px;
+  max-height: 60px; /* deixei um pouco maior */
 }
 
 nav ul {
@@ -32,17 +32,25 @@ nav a {
   text-decoration: none;
 }
 
+/* ==========================
+   BANNER
+========================== */
 .banner {
   text-align: center;
   padding: 2rem;
 }
 
 .banner img {
-  max-width: 90%;
+  max-width: 600px;   /* tamanho médio fixo */
+  width: 100%;        /* responsivo */
+  height: auto;
   margin-top: 1rem;
   border-radius: 8px;
 }
 
+/* ==========================
+   GALERIA
+========================== */
 .galeria {
   padding: 2rem;
   background: #f4f4f4;
@@ -56,9 +64,15 @@ nav a {
 
 .galeria img {
   width: 100%;
+  max-width: 350px;   /* limite para não ficarem gigantes */
+  margin: auto;
+  display: block;
   border-radius: 8px;
 }
 
+/* ==========================
+   CONTATO
+========================== */
 .contato {
   padding: 2rem;
 }
@@ -88,6 +102,9 @@ button:hover {
   background: #d62828;
 }
 
+/* ==========================
+   FOOTER
+========================== */
 footer {
   background: #111;
   color: #fff;
@@ -95,6 +112,9 @@ footer {
   padding: 1rem;
 }
 
+/* ==========================
+   ACESSIBILIDADE
+========================== */
 .acessibilidade {
   position: fixed;
   top: 10px;
@@ -109,7 +129,9 @@ footer {
   font-size: 1rem;
 }
 
-/* Alto contraste */
+/* ==========================
+   ALTO CONTRASTE
+========================== */
 .alto-contraste {
   background: #000 !important;
   color: #fff !important;
